@@ -1,0 +1,102 @@
+import Foundation
+
+//Crea el operador para realizar la potencia del valor a a la potencia b en valores enteros.
+
+postfix operator ^^ //subimos la potencia de la variable
+postfix func ^^(valor:Int)->Int
+{
+
+    //asignamos un valor a B
+    let b = 4
+    var z = b
+    //asignamos un valor a A
+    let a = valor
+    var total = a
+    repeat
+    {
+        total = total*a
+        z = (z-1)
+    } 
+    while (z>1)
+    return total
+}
+print(4^^)
+
+
+//3.	Crea el operador |> para ordenar la colección [2,5,3,4] de menor a mayor Para el tema de subscript.
+infix operator |>
+func |> (a:Int, f:(Int)->Int) -> Int
+{
+    return f(a)
+}
+
+func order(data:Int)->Int
+{
+    //ordenamos las operaciones
+    return ordenados
+}
+  let values = v.sorted()
+
+  print (values)
++
+var v = [2,5,3,4]
+v.sort()
+print(valores)
+
+//4.	Del conjunto de datos en el Array [2,3,4,5], 
+//crea el subscript para modificar los valores multiplicados por el valor 2 y extrae al valor dado un índice.
+
+let array = [2,3,4,5]
+class multi
+{
+    var resultado:[Int]
+    init(res:[Int])
+    {
+        self.resultado = res
+    }
+    subscript(idx:Int)->Int
+    {
+        //hacemos la multiplicación de los valores
+        get
+        {
+            return resultado[idx]
+        }
+        set(ans)
+        {
+            resultado[idx] = ans * 2 // mostramos el resultado
+        }
+    }
+}
+
+let mult= multi(res:array)
+mult[2] = mult[2]
+mult.resultado
+print("El valor es: ", mult[2])
+
+//5.	Crear el Struct para definir u obtener la posición para los personajes de tipo Enemigo
+// donde cada posición es de tipo CGPoint aplicando subscritps.
+
+struct CGPoint
+
+{
+    init(from decoder:Decoder) throws
+    init (x:Double , y:Double)
+}
+
+//6.	Crear la función ExisteValor en la cual se reciba como parámetro el valor a buscar dentro de un colección ["A":1, "B":2,"C":3
+
+let prueba = ["A":1, "B":2,"C":3]
+func ExisteValor(idx:String)
+{
+    guard let existe = prueba[idx]
+    else
+    {
+        print ("No existe")
+        return
+    }
+    print ("Existe")
+}
+
+ExisteValor(idx: "5")
+prueba["5"]
+ 
